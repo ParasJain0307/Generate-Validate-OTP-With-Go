@@ -70,12 +70,12 @@ Error Response:
 🧪 Testing With cURL
 
 # Send OTP
-curl -X POST http://localhost:8080/send-otp \
+curl -X POST http://localhost:8080/otp \
   -H "Content-Type: application/json" \
   -d '{"phone": "+919999999999"}'
 
 # Verify OTP
-curl -X POST http://localhost:8080/verify-otp \
+curl -X POST http://localhost:8080/verifyOTP \
   -H "Content-Type: application/json" \
   -d '{"phone": "+919999999999", "code": "123456"}'
 

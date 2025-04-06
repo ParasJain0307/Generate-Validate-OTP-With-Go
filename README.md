@@ -82,11 +82,24 @@ curl -X POST http://localhost:8080/verifyOTP \
 
 📁 Project Structure
 
-├── api/                  # Twilio logic
-├── main.go               # App entry point
-├── go.mod / go.sum       # Go module files
-├── .env                  # Local environment variables (not committed)
-└── README.md             # Project documentation
+├── api/
+│   ├── config.go        # Configuration and Twilio client setup
+│   ├── router.go        # API routes and HTTP server
+│   ├── services.go      # Twilio OTP send/verify logic
+│   ├── helper.go        # Utility functions (formatting, etc.)
+│   ├── handler.go       # HTTP handlers using the services
+│
+├── data/
+│   └── models.go        # Request/response structs and domain models
+│
+├── cmd/
+│   ├── main.go          # Application entry point (initialization, launch)
+│   └── .env             # Local environment variables (not committed)
+│
+├── go.mod / go.sum      # Go module and dependencies
+├── LICENSE              # MIT License file
+└── README.md            # Project documentation
+
 
 ⚠️ Notes
   Use phone numbers in E.164 format (e.g., +91XXXXXXXXXX)

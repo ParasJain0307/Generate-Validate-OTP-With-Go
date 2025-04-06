@@ -36,7 +36,7 @@ TWILIO_SERVICES_ID=your_twilio_verify_service_id
 
 ⚙️ API Endpoints
 
-✅ POST /send-otp
+✅ POST /otp
 Send an OTP to the given phone number.
 Request Body:
     {
@@ -47,7 +47,7 @@ Request Body:
      "sid": "VE1234567890abcdef" 
     }
 
-✅ POST /verify-otp
+✅ POST /verifyOTP
 
 Verify the OTP for the given phone number.
 Request Body:
